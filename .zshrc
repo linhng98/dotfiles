@@ -134,6 +134,7 @@ alias gp='git push'
 alias gm='git merge'
 alias vi='nvim'
 alias vim='nvim'
+alias fuck='thefuck'
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 setopt no_share_history
