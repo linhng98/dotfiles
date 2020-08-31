@@ -121,21 +121,24 @@ compinit
 alias ls='ls --color=auto'
 alias ll='ls -la'
 alias lt='tree -C'
-alias gi='git init'
 alias ga='git add'
 alias gcm='git commit'
-alias grv='git revert'
 alias gl='git log'
 alias gco='git checkout'
 alias gs='git status'
-alias grs='git reset'
-alias gb='git branch'
 alias gp='git push'
-alias gm='git merge'
 alias vi='nvim'
 alias vim='nvim'
-alias fuck='thefuck'
+alias fuck='thefuck $(fc -ln -1)'
+alias tf='terraform'
+alias gcd='gcloud'
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 setopt no_share_history
 
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/opt/google-cloud-sdk/path.zsh.inc' ]; then . '/opt/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/opt/google-cloud-sdk/completion.zsh.inc' ]; then . '/opt/google-cloud-sdk/completion.zsh.inc'; fi
