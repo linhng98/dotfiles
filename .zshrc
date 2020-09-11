@@ -71,11 +71,13 @@ COMPLETION_WAITING_DOTS="true"
 plugins=( 
     git 
     virtualenv 
+    zsh-autosuggestions
     dotenv 
     docker
     gcloud
     kubectl
     terraform
+    helm
 )
 
 source $ZSH/oh-my-zsh.sh

@@ -12,7 +12,6 @@ Plugin 'dracula/vim', { 'as': 'dracula' }
 Plugin 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
 Plugin 'itchyny/lightline.vim'
 Plugin 'jiangmiao/auto-pairs'
-Plugin 'neoclide/coc.nvim', { 'branch': 'release' }
 Plugin 'preservim/nerdtree'
 Plugin 'rlue/vim-barbaric'
 Plugin 'ryanoasis/vim-devicons'
