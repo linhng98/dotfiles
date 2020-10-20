@@ -194,6 +194,8 @@ bar {
 }
 
 for_window [class="^.*"] border pixel 0
+for_window [instance="sun-awt-X11-XWindowPeer"] focus
+for_window [class="^jetbrains-.+"][window_type=dialog] focus
 exec_always --no-startup-id feh --bg-scale ~/Pictures/wallpaper/witcher-sword.png
 exec_always --no-startup-id i3blocks
 exec_always --no-startup-id ibus-daemon -drx
