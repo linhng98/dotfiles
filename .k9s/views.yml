@@ -10,4 +10,7 @@ k9s:
         - READY
         - AGE
         - IP
+        - CPU
+        - MEM
+        - RESTARTS
 
