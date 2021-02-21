@@ -86,6 +86,7 @@ plugins=(
     terraform
     helm
     colored-man-pages
+    cargo
 )
 
 source $ZSH/oh-my-zsh.sh
