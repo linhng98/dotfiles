@@ -86,6 +86,7 @@ plugins=(
     terraform
     colored-man-pages
     aws
+    cargo
 )
 
 source $ZSH/oh-my-zsh.sh
