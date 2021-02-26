@@ -84,8 +84,8 @@ plugins=(
     gcloud
     kubectl
     terraform
-    helm
     colored-man-pages
+    aws
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -155,3 +155,4 @@ if [ -f '/opt/google-cloud-sdk/completion.zsh.inc' ]; then . '/opt/google-cloud-
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+#source ~/.helmrc

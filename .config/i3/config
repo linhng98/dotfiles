@@ -204,6 +204,6 @@ exec_always --no-startup-id xinput --set-prop 14 285 -0.2
 exec_always --no-startup-id "killall -q compton; compton --config ~/.config/compton/compton.conf --blur-method kawase --blur-background --blur-strength 3"
 
 
-bindsym $mod+b exec --no-startup-id firefox
+bindsym $mod+b exec --no-startup-id chromium
 bindsym $mod+f exec --no-startup-id nautilus
 bindsym $mod+t exec --no-startup-id st
