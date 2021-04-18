@@ -37,3 +37,7 @@ export MOZ_X11_EGL=1
 
 # rust
 export PATH=$PATH:$HOME/.cargo/bin
+
+# nvidia
+export VDPAU_DRIVER=nvidia
+export LIBVA_DRIVER_NAME=vdpau
