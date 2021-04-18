@@ -75,6 +75,7 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
+ZSH_DOTENV_PROMPT=false
 plugins=( 
     git 
     virtualenv 
@@ -87,6 +88,7 @@ plugins=(
     colored-man-pages
     aws
     cargo
+    helm
 )
 
 source $ZSH/oh-my-zsh.sh
