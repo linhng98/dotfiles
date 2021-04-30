@@ -186,7 +186,7 @@ bar {
         mode dock
         hidden_state show
         # modifier Mod4
-        font pango:DejaVu Sans Mono 8
+        font pango:DejaVu Sans Mono 9
         
         status_command i3blocks
         position bottom
