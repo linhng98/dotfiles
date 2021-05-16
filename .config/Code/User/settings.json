@@ -1,0 +1,36 @@
+{
+    "editor.fontSize": 17,
+    "python.venvFolders": [
+        "~/.virt-env"
+    ],
+    "python.pythonPath": "~/.virt-env/bin/python3",
+    "python.venvPath": "~/.virt-env",
+    "files.autoSave": "afterDelay",
+    "workbench.iconTheme": "material-icon-theme",
+    "rust-client.rlsPath": "$HOME/.cargo/bin/rls",
+    "rust-client.rustupPath": "$HOME/.cargo/bin/rustup",
+    "[c]": {
+        "editor.defaultFormatter": "xaver.clang-format"
+    },
+    "markdown.extension.toc.updateOnSave": false,
+    "[javascript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "editor.tabSize": 2,
+    "diffEditor.ignoreTrimWhitespace": false,
+    "workbench.editor.enablePreview": true,
+    "vim.enableNeovim": true,
+    "vim.vimrc.path": "$HOME/.config/nvim/init.vim",
+    "vim.neovimPath": "/usr/bin/nvim",
+    "vim.vimrc.enable": true,
+    "vim.useSystemClipboard": false,
+    "window.zoomLevel": 0,
+    "workbench.colorTheme": "Dracula",
+    "[typescript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "terminal.integrated.fontFamily": "DejaVuSansMono Nerd Font Mono"
+}
+

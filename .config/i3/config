@@ -186,7 +186,7 @@ bar {
         mode dock
         hidden_state show
         # modifier Mod4
-        font pango:DejaVu Sans Mono 9
+        font pango:DejaVu Sans Mono 8
         
         status_command i3blocks
         position bottom
@@ -201,7 +201,7 @@ exec_always --no-startup-id i3blocks
 exec_always --no-startup-id ibus-daemon -drx
 exec_always --no-startup-id xrdb ~/.Xresources
 exec_always --no-startup-id xinput --set-prop 14 285 -0.2
-exec_always --no-startup-id "killall -q compton; compton --config ~/.config/compton/compton.conf --blur-method kawase --blur-background --blur-strength 3"
+exec_always --no-startup-id "killall -q compton; compton --config ~/.config/compton/compton.conf --blur-method kawase --blur-background --blur-background-fixed"
 exec_always --no-startup-id nm-applet
 
 
