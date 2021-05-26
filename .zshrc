@@ -145,6 +145,7 @@ alias vim='nvim'
 alias fuck='eval $(thefuck $(fc -ln -1))'
 alias tf='terraform'
 alias gcd='gcloud'
+alias kb='kubectl'
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 setopt no_share_history

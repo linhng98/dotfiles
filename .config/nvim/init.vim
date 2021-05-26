@@ -37,6 +37,7 @@ set number
 set relativenumber
 set laststatus=2
 set termguicolors
+set nowrap
 
 if has('mouse')
    set mouse=a
