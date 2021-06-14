@@ -1,5 +1,5 @@
 {
-    "editor.fontSize": 17,
+    "editor.fontSize": 16,
     "python.venvFolders": [
         "~/.virt-env"
     ],
@@ -17,7 +17,6 @@
         "editor.defaultFormatter": "vscode.typescript-language-features"
     },
     "javascript.updateImportsOnFileMove.enabled": "always",
-    "editor.tabSize": 2,
     "diffEditor.ignoreTrimWhitespace": false,
     "workbench.editor.enablePreview": true,
     "vim.enableNeovim": true,
@@ -31,6 +30,18 @@
         "editor.defaultFormatter": "vscode.typescript-language-features"
     },
     "typescript.updateImportsOnFileMove.enabled": "always",
-    "terminal.integrated.fontFamily": "DejaVuSansMono Nerd Font Mono"
+    "terminal.integrated.fontFamily": "DejaVuSansMono Nerd Font Mono",
+    "workbench.editorAssociations": [
+        {
+            "viewType": "jupyter.notebook.ipynb",
+            "filenamePattern": "*.ipynb"
+        }
+    ],
+    "editor.cursorStyle": "line",
+    "editor.insertSpaces": false,
+    "editor.lineNumbers": "on",
+    "editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
+    "editor.wordWrap": "off",
+    "git.untrackedChanges": "hidden"
 }
 
