@@ -28,7 +28,7 @@ inputs = {
   cluster_name       = local.cluster_name
   min_master_version = local.min_master_version
   location           = local.zone
-  network = dependency.vpc.outputs.network
+  network            = dependency.vpc.outputs.network
   subnetwork         = dependency.subnet.outputs.subnetwork
 
   ip_allocation_policy = {

@@ -1,0 +1,5 @@
+- hosts: nginx_proxy_monitor
+  become: yes
+  gather_facts: yes
+  roles:
+    - ansible-role-nginx

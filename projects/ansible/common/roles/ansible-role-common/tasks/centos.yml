@@ -1,0 +1,11 @@
+---
+- name: redhat update all packages
+  yum:
+    name: '*'
+    state: latest
+
+- name: redhat install common package
+  yum:
+    name:
+      - vim
+    state: present

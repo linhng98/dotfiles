@@ -1,0 +1,5 @@
+- hosts: certbot_nginx_grafana_prometheus_proxy
+  become: yes
+  gather_facts: yes
+  roles:
+    - ansible-role-certbot

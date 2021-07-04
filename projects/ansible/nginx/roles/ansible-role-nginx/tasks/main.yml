@@ -1,0 +1,11 @@
+---
+- include: install.yml
+  become: true
+  tags:
+    - nginx_install
+
+- include: configure.yml
+  become: true
+  tags:
+    - nginx_configure
+
