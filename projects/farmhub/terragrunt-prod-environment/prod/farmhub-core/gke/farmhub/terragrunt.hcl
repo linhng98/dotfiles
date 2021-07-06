@@ -40,14 +40,21 @@ inputs = {
       name            = format("%s-pool-1", local.cluster_name)
       node_count      = 2
       preemptible     = true
-      machine_type    = "n1-standard-2"
+      machine_type    = "custom-1-6656"
       service_account = dependency.gke_node_sa.outputs.service_account_email
     },
     {
       name            = format("%s-pool-2", local.cluster_name)
       node_count      = 2
       preemptible     = true
-      machine_type    = "n1-standard-2"
+      machine_type    = "custom-1-6656"
+      service_account = dependency.gke_node_sa.outputs.service_account_email
+    },
+    {
+      name            = format("%s-pool-3", local.cluster_name)
+      node_count      = 2
+      preemptible     = true
+      machine_type    = "custom-1-6656"
       service_account = dependency.gke_node_sa.outputs.service_account_email
     },
   ],
@@ -64,6 +71,9 @@ inputs = {
     ],
     format("%s-pool-2", local.cluster_name) = [
       format("%s-pool-2", local.cluster_name)
+    ],
+    format("%s-pool-3", local.cluster_name) = [
+      format("%s-pool-3", local.cluster_name)
     ],
   },
 }

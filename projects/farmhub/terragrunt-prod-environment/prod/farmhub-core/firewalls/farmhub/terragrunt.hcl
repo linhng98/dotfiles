@@ -64,5 +64,14 @@ inputs = {
       ports         = ["51820"]
       protocol      = "UDP"
     },
+    {
+      name          = "${dependency.vpc.outputs.network_name}-allow-admission"
+      direction     = "INGRESS"
+      source_tags   = []
+      source_ranges = ["0.0.0.0/0"]
+      target_tags   = ["farmhub-cluster"]
+      ports         = ["9443", "8443"]
+      protocol      = "TCP"
+    },
   ]
 }
