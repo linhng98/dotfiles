@@ -38,6 +38,15 @@ inputs = {
       protocol      = "ICMP"
     },
     {
+      name          = "${dependency.vpc.outputs.network_name}-allow-monitor"
+      direction     = "INGRESS"
+      source_tags   = ["prometheus"]
+      source_ranges = []
+      target_tags   = ["${dependency.vpc.outputs.network_name}-allow-monitor"]
+      ports         = []
+      protocol      = "TCP"
+    },
+    {
       name          = "${dependency.vpc.outputs.network_name}-allow-ssh"
       direction     = "INGRESS"
       source_tags   = []

@@ -32,6 +32,8 @@ inputs = {
     automatic_restart = true
   }
   tags = [
+    "prometheus",
+    "grafana",
     "${dependency.vpc.outputs.network_name}-allow-ssh",
     "${dependency.vpc.outputs.network_name}-allow-http",
   ]

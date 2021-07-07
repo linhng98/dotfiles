@@ -25,7 +25,6 @@ inputs = {
   }
   tags = [
     "vpn-gateway",
-    "${dependency.vpc.outputs.network_name}-allow-all",
     "${dependency.vpc.outputs.network_name}-allow-ping",
     "${dependency.vpc.outputs.network_name}-allow-ssh",
     "${dependency.vpc.outputs.network_name}-allow-wireguard",
