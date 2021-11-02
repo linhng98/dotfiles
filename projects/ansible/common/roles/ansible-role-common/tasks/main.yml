@@ -1,9 +1,0 @@
----
-- include: centos.yml
-  become: true
-  when: ansible_distribution == "CentOS"
-
-- include: ubuntu.yml
-  become: true
-  when: ansible_distribution == "Ubuntu"
-

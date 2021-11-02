@@ -1,5 +1,0 @@
-- targets:
-    - 10.0.15.217:9187
-  labels:
-    project: farmhub-core
-    dbtype: postgres

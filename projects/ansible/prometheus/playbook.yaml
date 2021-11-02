@@ -1,5 +1,0 @@
-- hosts: prometheus
-  become: yes
-  gather_facts: yes
-  roles:
-    - ansible-prometheus

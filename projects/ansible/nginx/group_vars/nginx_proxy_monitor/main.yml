@@ -1,4 +1,0 @@
-enabled_sites:
-  - grafana.farmhub.asia
-  - prometheus.farmhub.asia
-disabled_sites: []

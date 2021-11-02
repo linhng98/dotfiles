@@ -1,4 +1,0 @@
-- hosts: servers
-  gather_facts: yes
-  roles:
-    - ansible-role-common

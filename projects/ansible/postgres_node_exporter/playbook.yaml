@@ -1,5 +1,0 @@
-- hosts: farmhub_postgres_node_exporter
-  become: yes
-  gather_facts: yes
-  roles:
-    - ansible-role-prometheus-postgres
