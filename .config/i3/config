@@ -201,7 +201,7 @@ exec_always --no-startup-id i3blocks
 exec_always --no-startup-id ibus-daemon -drx
 exec_always --no-startup-id xrdb ~/.Xresources
 exec_always --no-startup-id xinput --set-prop 14 285 -0.2
-exec_always --no-startup-id "killall -q compton; compton --config ~/.config/compton/compton.conf --blur-background --blur-background-fixed"
+exec_always --no-startup-id "killall -q picom; picom --config ~/.config/picom/picom.conf --blur-background --blur-background-fixed"
 exec_always --no-startup-id nm-applet
 
 

@@ -87,7 +87,7 @@ plugins=(
     terraform
     colored-man-pages
     aws
-    cargo
+    rust
     helm
 )
 
@@ -160,3 +160,5 @@ if [ -f '/opt/google-cloud-sdk/completion.zsh.inc' ]; then . '/opt/google-cloud-
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 #source ~/.helmrc
+#
+source '/opt/azure-cli/az.completion'
