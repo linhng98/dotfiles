@@ -59,8 +59,8 @@ bindsym Control+bracketleft exec xbacklight -inc 10
 bindsym Control+bracketright exec xbacklight -dec 10
 
 # Screenshot
-bindsym Print exec scrot $HOME/Pictures/`date +%Y-%m-%d_%H:%M:%S`.png -e 'xclip -selection c -t image/png < $f'
-bindsym --release Shift+Print exec scrot -s $HOME/Pictures/`date +%Y-%m-%d_%H:%M:%S`.png -e 'xclip -selection c -t image/png < $f'
+bindsym Print       exec flameshot full -p $HOME/Pictures
+bindsym Shift+Print exec flameshot gui -p $HOME/Pictures
 
 # Set floating window size
 floating_minimum_size 700 x 300
@@ -201,7 +201,7 @@ exec_always --no-startup-id i3blocks
 exec_always --no-startup-id ibus-daemon -drx
 exec_always --no-startup-id xrdb ~/.Xresources
 exec_always --no-startup-id xinput --set-prop 14 285 -0.2
-exec_always --no-startup-id "killall -q picom; picom --config ~/.config/picom/picom.conf --blur-background --blur-background-fixed"
+exec_always --no-startup-id "killall -q picom; picom --config ~/.config/picom/picom.conf"
 exec_always --no-startup-id nm-applet
 
 
