@@ -59,7 +59,7 @@ bindsym Control+bracketleft exec xbacklight -inc 10
 bindsym Control+bracketright exec xbacklight -dec 10
 
 # Screenshot
-bindsym Print       exec flameshot full -p $HOME/Pictures
+bindsym Print       exec flameshot full --clipboard -p $HOME/Pictures
 bindsym Shift+Print exec flameshot gui -p $HOME/Pictures
 
 # Set floating window size
