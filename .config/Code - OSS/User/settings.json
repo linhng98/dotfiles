@@ -7,8 +7,8 @@
     "python.venvPath": "~/.virt-env",
     "files.autoSave": "afterDelay",
     "workbench.iconTheme": "material-icon-theme",
-    "rust-client.rlsPath": "$HOME/.cargo/bin/rls",
-    "rust-client.rustupPath": "$HOME/.cargo/bin/rustup",
+    "rust-client.rlsPath": "/usr/bin/rls",
+    "rust-client.rustupPath": "/usr/bin/rustup",
     "[c]": {
         "editor.defaultFormatter": "xaver.clang-format"
     },
