@@ -162,3 +162,6 @@ if [ -f '/opt/google-cloud-sdk/completion.zsh.inc' ]; then . '/opt/google-cloud-
 #source ~/.helmrc
 #
 source '/opt/azure-cli/az.completion'
+
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /usr/bin/vault vault
