@@ -90,7 +90,6 @@ plugins=(
     aws
     rust
     helm
-    azcli
 )
 
 source $ZSH/oh-my-zsh.sh
