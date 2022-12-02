@@ -4,10 +4,13 @@ export VIRTUAL_ENV_DISABLE_Prompt=0
 # golang env
 export GOPATH=$HOME/.gopath
 export PATH=$PATH:$GOPATH/bin
+
+# scala
 export SBT_PATH=$HOME/.local/share/sbt
 export PATH=$PATH:$SBT_PATH/bin
-export SPARK_PATH=/opt/spark-3.0.1-bin-hadoop2.7
-export PATH=$PATH:$SPARK_PATH/bin
+
+# yarn
+export PATH=$PATH:$HOME/.yarn/bin
 
 # minikube disable emoji
 export MINIKUBE_IN_COLOR=false
@@ -16,7 +19,7 @@ export MINIKUBE_IN_STYLE=false
 # zsh
 export ZSH_DOTENV_PROMPT=always
 
-# ibus 
+# ibus
 export GTK_IM_MODULE=ibus
 export XMODIFIERS=@im=ibus
 export QT_IM_MODULE=ibus
@@ -41,4 +44,4 @@ export PATH=$PATH:$HOME/.cargo/bin
 # nvidia
 export VDPAU_DRIVER=nvidia
 export LIBVA_DRIVER_NAME=vdpau
-export CLOUDSDK_PYTHON="/usr/bin/python2"
+export CLOUDSDK_PYTHON="/usr/bin/python"
