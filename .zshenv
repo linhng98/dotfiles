@@ -45,3 +45,6 @@ export PATH=$PATH:$HOME/.cargo/bin
 export VDPAU_DRIVER=nvidia
 export LIBVA_DRIVER_NAME=vdpau
 export CLOUDSDK_PYTHON="/usr/bin/python"
+
+# gke
+export USE_GKE_GCLOUD_AUTH_PLUGIN=True
