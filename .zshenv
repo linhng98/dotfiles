@@ -48,3 +48,7 @@ export CLOUDSDK_PYTHON="/usr/bin/python"
 
 # gke
 export USE_GKE_GCLOUD_AUTH_PLUGIN=True
+
+# terraform
+export TF_PLUGIN_CACHE_DIR="$HOME/.terraform.d/plugin-cache"
+
