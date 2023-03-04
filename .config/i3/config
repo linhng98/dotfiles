@@ -118,15 +118,15 @@ bindsym $mod+7 workspace 7
 bindsym $mod+8 workspace 8
 bindsym $mod+9 workspace 9
 bindsym $mod+0 workspace 10
-bindsym Control+1 workspace 11
-bindsym Control+2 workspace 12
-bindsym Control+3 workspace 13
-bindsym Control+4 workspace 14
-bindsym Control+5 workspace 15
-bindsym Control+6 workspace 16
-bindsym Control+7 workspace 17
-bindsym Control+8 workspace 18
-bindsym Control+9 workspace 19
+bindsym Control+Shift+1 workspace 11
+bindsym Control+Shift+2 workspace 12
+bindsym Control+Shift+3 workspace 13
+bindsym Control+Shift+4 workspace 14
+bindsym Control+Shift+5 workspace 15
+bindsym Control+Shift+6 workspace 16
+bindsym Control+Shift+7 workspace 17
+bindsym Control+Shift+8 workspace 18
+bindsym Control+Shift+9 workspace 19
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace 1
@@ -167,7 +167,7 @@ mode "resize" {
         # Pressing right will grow the window’s width.
         # Pressing up will shrink the window’s height.
         # Pressing down will grow the window’s height.
-       
+
         bindsym Left resize shrink width 4 px or 4 ppt
         bindsym Down resize grow height 4 px or 4 ppt
         bindsym Up resize shrink height 4 px or 4 ppt
@@ -187,10 +187,10 @@ bar {
         hidden_state show
         # modifier Mod4
         font pango:DejaVu Sans Mono 9
-        
+
         status_command i3blocks
         position bottom
-        
+
 }
 
 for_window [class="^.*"] border pixel 1
