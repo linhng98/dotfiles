@@ -1,6 +1,9 @@
 # zsh promt
 export VIRTUAL_ENV_DISABLE_Prompt=0
 
+# local home bin
+export PATH=$PATH:$HOME/.local/bin
+
 # golang env
 export GOPATH=$HOME/.gopath
 export PATH=$PATH:$GOPATH/bin
