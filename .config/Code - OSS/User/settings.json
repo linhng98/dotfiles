@@ -30,5 +30,5 @@
         "editor.defaultFormatter": "vscode.typescript-language-features"
     },
     "typescript.updateImportsOnFileMove.enabled": "always",
-    "terminal.integrated.fontFamily": "DejaVuSansM Nerd Font Mono"
+    "terminal.integrated.fontFamily": "DejaVuSansM Nerd Font"
 }
