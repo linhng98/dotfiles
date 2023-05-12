@@ -132,7 +132,6 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
-alias ls='ls --color=auto'
 alias ll='ls -la'
 alias lt='tree -C'
 alias ga='git add'
