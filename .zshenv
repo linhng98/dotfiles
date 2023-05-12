@@ -19,12 +19,6 @@ export MINIKUBE_IN_STYLE=false
 # zsh
 export ZSH_DOTENV_PROMPT=always
 
-# nvim
-export PATH=$PATH:$HOME/.local/nvim.app/bin
-
-# kitty
-export PATH=$PATH:$HOME/.local/kitty.app/bin
-
 # ibus
 export GTK_IM_MODULE=ibus
 export XMODIFIERS=@im=ibus

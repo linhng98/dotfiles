@@ -207,4 +207,4 @@ exec_always --no-startup-id nm-applet
 
 bindsym $mod+b exec --no-startup-id google-chrome-stable
 bindsym $mod+f exec --no-startup-id nautilus
-bindsym $mod+t exec --no-startup-id st
+bindsym $mod+t exec --no-startup-id kitty
