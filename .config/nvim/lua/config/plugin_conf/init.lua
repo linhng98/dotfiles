@@ -1,0 +1,10 @@
+require("config.plugin_conf.lualine")
+require("config.plugin_conf.bufferline")
+require("config.plugin_conf.treesitter")
+require("config.plugin_conf.telescope")
+require("config.plugin_conf.autopairs")
+require("config.plugin_conf.mason")
+require("config.plugin_conf.mason_lspconfig")
+require("config.plugin_conf.lspconfig")
+require("config.plugin_conf.cmp")
+
