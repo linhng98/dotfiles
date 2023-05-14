@@ -7,4 +7,8 @@ require("config.plugin_conf.mason")
 require("config.plugin_conf.mason_lspconfig")
 require("config.plugin_conf.lspconfig")
 require("config.plugin_conf.cmp")
+require("config.plugin_conf.null_ls")
+require("config.plugin_conf.trouble")
+require("config.plugin_conf.comment")
+require("config.plugin_conf.noice")
 
