@@ -1,6 +1,3 @@
-vim.cmd [[syntax enable]]
-vim.cmd [[colorscheme dracula]]
-
 -- Auto jump to previous working line
 vim.cmd([[
   if has("autocmd")
