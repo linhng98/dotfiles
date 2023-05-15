@@ -8,3 +8,4 @@ xinput set-prop $tid  "libinput Accel Speed" 0.9
 if [[ ! $DISPLAY && $XDG_VTNR -eq 1 ]]; then
   exec startx
 fi
+. "$HOME/.cargo/env"

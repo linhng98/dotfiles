@@ -14,6 +14,7 @@ export PATH=$PATH:$SBT_PATH/bin
 
 # yarn
 export PATH=$PATH:$HOME/.yarn/bin
+export PATH=$PATH:$HOME/.config/yarn/global/node_modules/.bin
 
 # minikube disable emoji
 export MINIKUBE_IN_COLOR=false
@@ -55,3 +56,4 @@ export USE_GKE_GCLOUD_AUTH_PLUGIN=True
 # terraform
 export TF_PLUGIN_CACHE_DIR="$HOME/.terraform.d/plugin-cache"
 
+. "$HOME/.cargo/env"
