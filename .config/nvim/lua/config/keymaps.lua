@@ -11,7 +11,7 @@ vim.keymap.set('n', '<S-Tab>', ':bprevious<CR>')
 -- save and quit window
 vim.keymap.set('n', '<C-s>', ':w<CR>')
 vim.keymap.set('n', '<C-q>', ':wq<CR>')
-vim.keymap.set('n', '<C-e>', ':q!<CR>')
+vim.keymap.set('n', '<C-e>', ':qa!<CR>')
 
 -- resize window
 vim.keymap.set('n', '<C-M-h>', ':vertical resize -5<CR>')

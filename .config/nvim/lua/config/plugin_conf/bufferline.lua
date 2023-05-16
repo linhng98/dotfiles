@@ -1,9 +1,6 @@
 require("bufferline").setup {
   options = {
     separator_style = "slant",
-    indicator = {
-      style = "underline",
-    },
     offsets = {
       {
           filetype = "NvimTree",
