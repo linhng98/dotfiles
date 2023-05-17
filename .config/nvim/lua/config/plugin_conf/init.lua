@@ -11,4 +11,3 @@ require("config.plugin_conf.null_ls")
 require("config.plugin_conf.trouble")
 require("config.plugin_conf.comment")
 require("config.plugin_conf.noice")
-

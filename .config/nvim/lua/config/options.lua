@@ -5,16 +5,15 @@ vim.cmd([[
   endif
 ]])
 
-vim.g.mapleader = ' '
-vim.g.maplocalleader = ' '
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
 
 vim.opt.laststatus = 2
 vim.opt.number = true
 vim.opt.termguicolors = true
 vim.opt.wrap = false
 vim.opt.smarttab = true
-vim.opt.smartindent= true
-vim.opt.expandtab= true
+vim.opt.smartindent = true
+vim.opt.expandtab = true
 vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2
-

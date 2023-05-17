@@ -1,6 +1,5 @@
-require('noice').setup({
-  cmdline = {
-    view = 'cmdline'
-  }
+require("noice").setup({
+	cmdline = {
+		view = "cmdline",
+	},
 })
-
