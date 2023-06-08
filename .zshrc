@@ -129,6 +129,7 @@ SAVEHIST=1000
 zstyle :compinstall filename '$HOME/.zshrc'
 
 autoload -Uz compinit
+autoload -U +X bashcompinit && bashcompinit
 compinit
 # End of lines added by compinstall
 
@@ -159,11 +160,10 @@ if [ -f '/opt/google-cloud-sdk/path.zsh.inc' ]; then . '/opt/google-cloud-sdk/pa
 if [ -f '/opt/google-cloud-sdk/completion.zsh.inc' ]; then . '/opt/google-cloud-sdk/completion.zsh.inc'; fi
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+[[ ! -f "$HOME/.p10k.zsh" ]] || source "$HOME/.p10k.zsh"
 
-if [ -f '~/.oh-my-zsh/custom/az.completion' ]; then . '~/.oh-my-zsh/custom/az.completion'; fi
+if [ -f "$HOME/.oh-my-zsh/custom/az.completion" ]; then . "$HOME/.oh-my-zsh/custom/az.completion"; fi
 
-autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/bin/vault vault
 
 # fh - repeat history
