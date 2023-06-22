@@ -21,6 +21,7 @@ return require("lazy").setup({
 			vim.cmd([[colorscheme dracula]])
 		end,
 	},
+	{ "rhysd/git-messenger.vim" },
 	{ "nvim-tree/nvim-web-devicons" },
 	{ "nvim-lua/plenary.nvim" },
 	{ "williamboman/mason.nvim" },
