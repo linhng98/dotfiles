@@ -1,3 +1,6 @@
+# default editor
+export EDITOR=nvim
+
 # zsh promt
 export VIRTUAL_ENV_DISABLE_Prompt=0
 
