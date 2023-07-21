@@ -180,5 +180,3 @@ if [ -e '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh' ]; then
 fi
 # End Nix
 
-# set keyboard input delay https://wiki.archlinux.org/title/Xorg/Keyboard_configuration
-xset r rate 200 40
