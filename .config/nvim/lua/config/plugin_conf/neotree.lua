@@ -1,6 +1,6 @@
 require("nvim-tree").setup({
 	filters = {
 		dotfiles = false,
-		git_ignored = true,
+		git_ignored = false,
 	},
 })
