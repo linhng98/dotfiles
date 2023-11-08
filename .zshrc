@@ -149,6 +149,8 @@ alias gcd='gcloud'
 alias kb='kubectl'
 alias python='/usr/bin/python3'
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias ssh="export TERM=xterm && ssh"
+alias kssh="kitty +kitten ssh"
 
 setopt no_share_history
 
@@ -171,8 +173,6 @@ fh() {
   print -z $( ([ -n "$ZSH_NAME" ] && fc -l 1 || history) | fzf +s --tac | sed -E 's/ *[0-9]*\*? *//' | sed -E 's/\\/\\\\/g')
 }
 
-[ "$TERM" = "xterm-kitty" ] && alias ssh="kitty +kitten ssh"
-
 # related to issue https://github.com/NixOS/nix/issues/3616
 # Nix
 if [ -e '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh' ]; then
@@ -180,3 +180,5 @@ if [ -e '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh' ]; then
 fi
 # End Nix
 
+
+complete -o nospace -C /usr/local/Cellar/packer/1.9.4/libexec/bin/packer packer

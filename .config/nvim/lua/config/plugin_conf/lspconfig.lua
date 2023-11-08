@@ -61,4 +61,4 @@ vim.api.nvim_create_autocmd("LspAttach", {
 })
 
 -- Format on save
-vim.cmd([[autocmd BufWritePre * lua vim.lsp.buf.format()]])
+-- vim.cmd([[autocmd BufWritePre * lua vim.lsp.buf.format()]])
