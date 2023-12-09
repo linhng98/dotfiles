@@ -59,8 +59,7 @@ bindsym Control+bracketleft exec xbacklight -inc 10
 bindsym Control+bracketright exec xbacklight -dec 10
 
 # Screenshot
-bindsym Print       exec flameshot full --clipboard -p $HOME/Pictures
-bindsym Shift+Print exec flameshot gui --clipboard -p $HOME/Pictures
+bindsym Shift+Print exec grim -g "$(slurp)" - | swappy -f -
 
 # Set floating window size
 floating_minimum_size 700 x 300
@@ -73,7 +72,7 @@ bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
 # lock desktop
-bindsym $mod+Shift+l exec "i3lock -i ~/Pictures/wallpaper/lockscreen.png --clock --indicator & sleep 1 && xset dpms force off"
+bindsym $mod+Shift+l exec "swaylock -f"
 
 # move window position
 bindsym $mod+Shift+Left move left 15 px
