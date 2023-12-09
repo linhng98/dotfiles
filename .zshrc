@@ -147,7 +147,6 @@ alias fuck='eval $(thefuck $(fc -ln -1))'
 alias tf='terraform'
 alias gcd='gcloud'
 alias kb='kubectl'
-alias python='/usr/bin/python3'
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias ssh="export TERM=xterm && ssh"
 alias kssh="kitty +kitten ssh"
