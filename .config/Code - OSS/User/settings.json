@@ -1,9 +1,9 @@
 {
     "editor.fontSize": 17,
     "python.venvFolders": [
-        ".venv"
+        "${workspaceFolder}/.venv"
     ],
-    "python.venvPath": ".venv",
+    "python.venvPath": "${workspaceFoler}/.venv",
     "files.autoSave": "afterDelay",
     "workbench.iconTheme": "material-icon-theme",
     "rust-client.rlsPath": "/usr/bin/rls",
