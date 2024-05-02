@@ -8,4 +8,7 @@ require("nvim-tree").setup({
     update_root = false,
     ignore_list = {},
   },
+  view = {
+    preserve_window_proportions = true
+  },
 })
