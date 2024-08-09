@@ -1,6 +1,9 @@
 # default editor
 export EDITOR=nvim
 
+# homebrew
+export PATH=$PATH:/opt/homebrew/bin
+
 # zsh promt
 export VIRTUAL_ENV_DISABLE_Prompt=0
 
