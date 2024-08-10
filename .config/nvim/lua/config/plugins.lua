@@ -35,18 +35,19 @@ return require("lazy").setup({
 	{ "hrsh7th/cmp-cmdline" },
 	{ "hrsh7th/nvim-cmp" },
 	{ "numToStr/Comment.nvim" },
-  { 'gen740/SmoothCursor.nvim',
-    config = function()
-      require('smoothcursor').setup()
-    end
-  },
+	{
+		"gen740/SmoothCursor.nvim",
+		config = function()
+			require("smoothcursor").setup()
+		end,
+	},
+	{
+		"stevearc/conform.nvim",
+		opts = {},
+	},
 	{
 		"folke/trouble.nvim",
 		dependencies = { "nvim-tree/nvim-web-devicons" },
-	},
-	{
-		"jose-elias-alvarez/null-ls.nvim",
-		dependencies = { "nvim-lua/plenary.nvim" },
 	},
 	{
 		"nvim-telescope/telescope.nvim",
