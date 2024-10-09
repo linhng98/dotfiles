@@ -1,7 +1,9 @@
 -- Auto jump to previous working line
+-- https://www.reddit.com/r/neovim/comments/125gctj/e5248_invalid_character_in_group_name_with/
 vim.cmd([[
   if has("autocmd")
     au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+    au BufRead,BufNewFile *.tfvars set filetype=terraform
   endif
 ]])
 
