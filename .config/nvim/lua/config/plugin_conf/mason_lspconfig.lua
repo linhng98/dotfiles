@@ -9,7 +9,7 @@ require("mason-lspconfig").setup({
 		"gopls",
 		"html",
 		"jsonls",
-		"tsserver",
+		"ts_ls",
 		"pyright",
 		"terraformls",
 		"tflint",

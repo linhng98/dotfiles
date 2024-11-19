@@ -1,7 +1,7 @@
 -- Setup language servers.
 local lspconfig = require("lspconfig")
 lspconfig.pyright.setup({})
-lspconfig.tsserver.setup({})
+lspconfig.ts_ls.setup({})
 lspconfig.gopls.setup({})
 lspconfig.terraformls.setup({})
 lspconfig.yamlls.setup({
