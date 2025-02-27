@@ -64,18 +64,18 @@ export TF_PLUGIN_CACHE_DIR="$HOME/.terraform.d/plugin-cache"
 
 . "$HOME/.cargo/env"
 
-# sway nvidia
-export LIBVA_DRIVER_NAME=nvidia
-export XDG_SESSION_TYPE=wayland
-export XDG_CURRENT_DESKTOP=sway
-export GBM_BACKEND=nvidia-drm
-export __GLX_VENDOR_LIBRARY_NAME=nvidia
-export GTK_THEME=Dracula
-export WLR_NO_HARDWARE_CURSORS=1
-export GDK_BACKEND=wayland
-export WLR_RENDERER=vulkan
-#[PREVENT FLICKERING, BUT FUCK UP GAMING]
-export XWAYLAND_NO_GLAMOR=1
+## sway nvidia
+#export LIBVA_DRIVER_NAME=nvidia
+#export XDG_SESSION_TYPE=wayland
+#export XDG_CURRENT_DESKTOP=sway
+#export GBM_BACKEND=nvidia-drm
+#export __GLX_VENDOR_LIBRARY_NAME=nvidia
+#export GTK_THEME=Dracula
+#export WLR_NO_HARDWARE_CURSORS=1
+#export GDK_BACKEND=wayland
+#export WLR_RENDERER=vulkan
+##[PREVENT FLICKERING, BUT FUCK UP GAMING]
+#export XWAYLAND_NO_GLAMOR=1
 #[QT Variables]
 export QT_QPA_PLATFORMTHEME=qt5ct
 export QT_QPA_PLATFORMTHEME=qt6ct
