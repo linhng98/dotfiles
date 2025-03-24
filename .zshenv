@@ -4,9 +4,6 @@ export EDITOR=nvim
 # homebrew
 export PATH=$PATH:/opt/homebrew/bin
 
-# zsh promt
-export VIRTUAL_ENV_DISABLE_Prompt=0
-
 # local home bin
 export PATH=$PATH:$HOME/.local/bin
 
@@ -28,6 +25,9 @@ export MINIKUBE_IN_STYLE=false
 
 # zsh
 export ZSH_DOTENV_PROMPT=always
+export VIRTUAL_ENV_DISABLE_Prompt=0
+export HISTSIZE=1000000
+export SAVEHIST=$HISTSIZE
 
 # ibus
 export GTK_IM_MODULE=ibus
