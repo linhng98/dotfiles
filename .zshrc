@@ -167,6 +167,8 @@ if [ -f "$HOME/.oh-my-zsh/custom/az.completion" ]; then . "$HOME/.oh-my-zsh/cust
 
 complete -o nospace -C /usr/bin/vault vault
 
+complete -C "$(which aws_completer)" aws
+
 # fh - repeat history
 fh() {
   print -z $( ([ -n "$ZSH_NAME" ] && fc -l 1 || history) | fzf +s --tac | sed -E 's/ *[0-9]*\*? *//' | sed -E 's/\\/\\\\/g')
@@ -179,9 +181,9 @@ if [ -e '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh' ]; then
 fi
 # End Nix
 
-
 complete -o nospace -C /usr/local/Cellar/packer/1.9.4/libexec/bin/packer packer
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
