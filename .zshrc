@@ -121,9 +121,6 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 # Lines configured by zsh-newuser-install
 
-HISTFILE=~/.histfile
-HISTSIZE=1000
-SAVEHIST=1000
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
 zstyle :compinstall filename '$HOME/.zshrc'
@@ -186,4 +183,7 @@ complete -o nospace -C /usr/local/Cellar/packer/1.9.4/libexec/bin/packer packer
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# gpg agent
+gpgconf --launch gpg-agent
 
