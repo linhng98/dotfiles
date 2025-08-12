@@ -19,3 +19,15 @@ vim.opt.smartindent = true
 vim.opt.expandtab = true
 vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2
+
+-- Detect filetype
+vim.filetype.add({
+  extension = {
+    gotmpl = 'gotmpl',
+  },
+  pattern = {
+    [".*/templates/.*%.tpl"] = "helm",
+    [".*/templates/.*%.ya?ml"] = "helm",
+    ["helmfile.*%.ya?ml"] = "helm",
+  },
+})

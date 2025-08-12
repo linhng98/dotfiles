@@ -40,6 +40,19 @@ lspconfig.rust_analyzer.setup({
     ["rust-analyzer"] = {},
   },
 })
+lspconfig.helm_ls.setup({
+  root_dir = require("lspconfig.util").root_pattern("Chart.yaml", ".git"),
+  settings = {
+    ['helm-ls'] = {
+      helmLint = {
+        enabled = true,
+      },
+      yamlls = {
+        enabled = false,
+      },
+    },
+  },
+})
 
 -- Global mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
