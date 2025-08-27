@@ -4,7 +4,7 @@ lspconfig.pyright.setup({})
 lspconfig.ts_ls.setup({})
 lspconfig.gopls.setup({})
 lspconfig.terraformls.setup({
-  filetypes = { "terraform" },
+  filetypes = { "terraform", "hcl" },
 })
 lspconfig.yamlls.setup({
   settings = {

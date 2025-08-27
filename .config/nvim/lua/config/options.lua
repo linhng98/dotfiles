@@ -24,6 +24,7 @@ vim.opt.shiftwidth = 2
 vim.filetype.add({
   extension = {
     gotmpl = 'gotmpl',
+    hcl = 'hcl',
   },
   pattern = {
     [".*/templates/.*%.tpl"] = "helm",
