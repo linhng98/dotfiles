@@ -9,11 +9,11 @@ vim.opt.shortmess = vim.opt.shortmess + { c = true }
 local cmp = require("cmp")
 cmp.setup({
 	-- Required by vsnip
-	snippet = {
-		expand = function(args)
-			vim.fn["vsnip#anonymous"](args.body)
-		end,
-	},
+	-- snippet = {
+	-- 	expand = function(args)
+	-- 		vim.fn["vsnip#anonymous"](args.body)
+	-- 	end,
+	-- },
 	-- Add Mappings to control the code suggestions
 	mapping = {
 		-- Shift+TAB to go to the Previous Suggested item
