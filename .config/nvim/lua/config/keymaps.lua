@@ -9,8 +9,8 @@ vim.keymap.set("n", "<Tab>", ":bnext<CR>")
 vim.keymap.set("n", "<S-Tab>", ":bprevious<CR>")
 
 -- save and quit window
-vim.keymap.set("n", "<C-s>", ":w<CR>")
-vim.keymap.set("n", "<C-q>", ":wq<CR>")
+vim.keymap.set("n", "<C-s>", ":w!<CR>")
+vim.keymap.set("n", "<C-q>", ":wq!<CR>")
 vim.keymap.set("n", "<C-e>", ":qa!<CR>")
 
 -- resize window

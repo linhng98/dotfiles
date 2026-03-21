@@ -170,8 +170,9 @@ complete -C "$(which aws_completer)" aws
 fh() {
   print -z $( ([ -n "$ZSH_NAME" ] && fc -l 1 || history) | fzf +s --tac | sed -E 's/ *[0-9]*\*? *//' | sed -E 's/\\/\\\\/g')
 }
+zle -N fh fh
+bindkey '^R' fh
 
-# related to issue https://github.com/NixOS/nix/issues/3616
 # Nix
 if [ -e '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh' ]; then
   source '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh'
