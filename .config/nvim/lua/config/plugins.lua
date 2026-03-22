@@ -35,7 +35,6 @@ return require("lazy").setup({
   { "hrsh7th/cmp-cmdline" },
   { "hrsh7th/nvim-cmp" },
   { "numToStr/Comment.nvim" },
-  { "github/copilot.vim" },
   {
     "gen740/SmoothCursor.nvim",
     config = function()

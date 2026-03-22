@@ -59,11 +59,11 @@ vim.lsp.config('helm_ls', {
   -- For root_dir, we need to use vim.fs.find instead of lspconfig.util
   root_dir = function(fname)
     -- Look for Chart.yaml or .git directory
-    local root_markers = vim.fs.find({"Chart.yaml", ".git"}, {
+    local root_markers = vim.fs.find({ "Chart.yaml", ".git" }, {
       upward = true,
       path = vim.fs.dirname(fname),
     })[1]
-    
+
     return root_markers and vim.fs.dirname(root_markers) or nil
   end,
   settings = {
@@ -121,7 +121,10 @@ vim.api.nvim_create_autocmd("LspAttach", {
     vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, opts)
     vim.keymap.set("n", "gr", vim.lsp.buf.references, opts)
     vim.keymap.set("n", "<leader>f", function()
-      vim.lsp.buf.format({ async = true })
+      require("conform").format({
+        async      = true,
+        lsp_format = "fallback",
+      })
     end, opts)
   end,
 })
