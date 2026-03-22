@@ -18,8 +18,14 @@
 
   outputs = inputs@{ self, darwin, nixpkgs, nixpkgs-unstable, home-manager }:
   let
+    system = "aarch64-darwin";
+
+    pkgs = import nixpkgs {
+      inherit system;
+    };
+
     pkgs-unstable = import nixpkgs-unstable {
-      system = "aarch64-darwin";
+      inherit system;
     };
   in
   {
