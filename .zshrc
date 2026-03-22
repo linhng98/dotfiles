@@ -188,3 +188,7 @@ export NVM_DIR="$HOME/.nvm"
 # gpg agent
 gpgconf --launch gpg-agent
 
+gitconfig_linhng98() {
+  git config user.name "Linh Nguyen"
+  git config user.email "linhnguyen.workspace@gmail.com"
+}
