@@ -3,6 +3,8 @@ require("conform").setup({
   formatters_by_ft = {
     lua = { "stylua" },
     go = { "goimports", "gofmt" },
+    c = { "clang_format" },
+    cpp = { "clang_format" },
     rust = { "rustfmt", lsp_format = "fallback" },
     -- You can use a function here to determine the formatters dynamically
     python = function(bufnr)

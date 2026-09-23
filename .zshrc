@@ -9,15 +9,6 @@ fi
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-# Path to your oh-my-zsh installation.
-export ZSH="$HOME/.oh-my-zsh"
-
-# Set name of the theme to load --- if set to "random", it will
-# load a random theme each time oh-my-zsh is loaded, in which case,
-# to know which specific one was loaded, run: echo $RANDOM_THEME
-# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="powerlevel10k/powerlevel10k"
-
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in $ZSH/themes/
@@ -71,29 +62,6 @@ COMPLETION_WAITING_DOTS="true"
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
-# Which plugins would you like to load?
-# Standard plugins can be found in $ZSH/plugins/
-# Custom plugins may be added to $ZSH_CUSTOM/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
-ZSH_DOTENV_PROMPT=false
-plugins=( 
-    git 
-    virtualenv 
-    zsh-autosuggestions
-    dotenv 
-    docker
-    gcloud
-    kubectl
-    terraform
-    colored-man-pages
-    aws
-    rust
-    helm
-)
-
-source $ZSH/oh-my-zsh.sh
-
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -122,16 +90,24 @@ source $ZSH/oh-my-zsh.sh
 # Lines configured by zsh-newuser-install
 
 # End of lines configured by zsh-newuser-install
-# The following lines were added by compinstall
-zstyle :compinstall filename '$HOME/.zshrc'
 
+fpath=("$HOME/.nix-profile/share/zsh/site-functions" $fpath)
 autoload -Uz compinit
 autoload -U +X bashcompinit && bashcompinit
 compinit
+
+# terraform auto complete
+complete -o nospace -C $HOME/.nix-profile/bin/terraform terraform
+# terragrunt auto complete
+complete -o nospace -C $HOME/.nix-profile/bin/terragrunt terragrunt
+# docker
+source <(docker completion zsh)
+
 # End of lines added by compinstall
 
 alias ll='ls -la'
 alias lt='tree -C'
+alias gd='git diff'
 alias ga='git add'
 alias gcm='git commit'
 alias gl='git log'
@@ -140,31 +116,14 @@ alias gs='git status'
 alias gp='git push'
 alias vi='nvim'
 alias vim='nvim'
-alias fuck='eval $(thefuck $(fc -ln -1))'
 alias tf='terraform'
 alias gcd='gcloud'
 alias kb='kubectl'
-alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias ssh="export TERM=xterm && ssh"
 alias kssh="kitty +kitten ssh"
+alias nixbuild="sudo nix flake update home-config --flake /etc/nixos && sudo nixos-rebuild switch --flake /etc/nixos#nixos"
 
 setopt no_share_history
-
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/opt/google-cloud-sdk/path.zsh.inc' ]; then . '/opt/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/opt/google-cloud-sdk/completion.zsh.inc' ]; then . '/opt/google-cloud-sdk/completion.zsh.inc'; fi
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f "$HOME/.p10k.zsh" ]] || source "$HOME/.p10k.zsh"
-
-if [ -f "$HOME/.oh-my-zsh/custom/az.completion" ]; then . "$HOME/.oh-my-zsh/custom/az.completion"; fi
-
-complete -o nospace -C /usr/bin/vault vault
-
-complete -C "$(which aws_completer)" aws
 
 # fh - repeat history
 fh() {
@@ -179,11 +138,15 @@ if [ -e '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh' ]; then
 fi
 # End Nix
 
-complete -o nospace -C /usr/local/Cellar/packer/1.9.4/libexec/bin/packer packer
+# Packages installed only for lynk by Home Manager.
+source "$HOME/.nix-profile/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
+source "$HOME/.nix-profile/share/zsh-powerlevel10k/powerlevel10k.zsh-theme"
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# Existing Powerlevel10k configuration.
+[[ -r "$HOME/.p10k.zsh" ]] && source "$HOME/.p10k.zsh"
+
+# Syntax highlighting should be sourced last.
+source "$HOME/.nix-profile/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 
 # gpg agent
 gpgconf --launch gpg-agent

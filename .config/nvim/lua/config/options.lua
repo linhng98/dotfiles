@@ -13,6 +13,7 @@ vim.g.maplocalleader = " "
 vim.opt.laststatus = 2
 vim.opt.number = true
 vim.opt.termguicolors = true
+vim.opt.mouse = "a"
 vim.opt.wrap = false
 vim.opt.smarttab = true
 vim.opt.smartindent = true

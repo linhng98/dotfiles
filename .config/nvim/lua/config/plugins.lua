@@ -34,7 +34,6 @@ return require("lazy").setup({
   { "hrsh7th/cmp-path" },
   { "hrsh7th/cmp-cmdline" },
   { "hrsh7th/nvim-cmp" },
-  { "numToStr/Comment.nvim" },
   {
     "gen740/SmoothCursor.nvim",
     config = function()
@@ -42,12 +41,28 @@ return require("lazy").setup({
     end,
   },
   {
-    "stevearc/conform.nvim",
-    opts = {},
+    "karb94/neoscroll.nvim",
+    opts = {
+      mappings = {},
+      easing = "quadratic",
+      hide_cursor = false,
+    },
+    config = function(_, opts)
+      local neoscroll = require("neoscroll")
+      neoscroll.setup(opts)
+
+      local modes = { "n", "v", "x", "i" }
+      vim.keymap.set(modes, "<ScrollWheelUp>", function()
+        neoscroll.scroll(-6, { move_cursor = false, duration = 100 })
+      end, { silent = true, desc = "Smooth scroll up" })
+      vim.keymap.set(modes, "<ScrollWheelDown>", function()
+        neoscroll.scroll(6, { move_cursor = false, duration = 100 })
+      end, { silent = true, desc = "Smooth scroll down" })
+    end,
   },
   {
-    "folke/trouble.nvim",
-    dependencies = { "nvim-tree/nvim-web-devicons" },
+    "stevearc/conform.nvim",
+    opts = {},
   },
   {
     "nvim-telescope/telescope.nvim",
@@ -76,10 +91,8 @@ return require("lazy").setup({
 
   {
     "nvim-treesitter/nvim-treesitter",
-    build = function()
-      local ts_update = require("nvim-treesitter.install").update({ with_sync = true })
-      ts_update()
-    end,
+    lazy = false,
+    build = ":TSUpdate",
   },
   {
     "iamcco/markdown-preview.nvim",

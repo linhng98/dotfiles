@@ -1,3 +1,6 @@
+[[ -r "$HOME/.nix-profile/etc/profile.d/hm-session-vars.sh" ]] &&
+  source "$HOME/.nix-profile/etc/profile.d/hm-session-vars.sh"
+
 # default editor
 export EDITOR=nvim
 
@@ -29,11 +32,6 @@ export VIRTUAL_ENV_DISABLE_Prompt=0
 export HISTSIZE=1000000
 export SAVEHIST=$HISTSIZE
 
-# ibus
-export GTK_IM_MODULE=ibus
-export XMODIFIERS=@im=ibus
-export QT_IM_MODULE=ibus
-
 # vagrant
 export VAGRANT_DEFAULT_PROVIDER=libvirt
 
@@ -48,9 +46,6 @@ export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools
 # vaapi firefox
 export MOZ_X11_EGL=1
 
-# rust
-export PATH=$PATH:$HOME/.cargo/bin
-
 # nvidia
 export VDPAU_DRIVER=nvidia
 export LIBVA_DRIVER_NAME=vdpau
@@ -61,8 +56,6 @@ export USE_GKE_GCLOUD_AUTH_PLUGIN=True
 
 # terraform
 export TF_PLUGIN_CACHE_DIR="$HOME/.terraform.d/plugin-cache"
-
-. "$HOME/.cargo/env"
 
 ## sway nvidia
 #export LIBVA_DRIVER_NAME=nvidia

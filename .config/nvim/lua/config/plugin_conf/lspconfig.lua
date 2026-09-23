@@ -7,6 +7,19 @@ vim.lsp.config('ts_ls', {})
 -- Go
 vim.lsp.config('gopls', {})
 
+-- C/C++
+-- Use clangd from NixOS' clang-tools package instead of Mason's dynamically
+-- linked binary.
+vim.lsp.config('clangd', {
+  cmd = {
+    "clangd",
+    "--background-index",
+    "--clang-tidy",
+    "--completion-style=detailed",
+  },
+  filetypes = { "c", "cpp", "objc", "objcpp", "cuda" },
+})
+
 -- Terraform
 vim.lsp.config('terraformls', {
   filetypes = { "terraform", "hcl" },
@@ -26,6 +39,36 @@ vim.lsp.config('yamlls', {
 
 -- Lua
 vim.lsp.config('lua_ls', {
+  -- Use the native Nix package. Mason's generic dynamically linked binary
+  -- cannot execute on NixOS.
+  cmd = { vim.fn.expand("~/.nix-profile/bin/lua-language-server") },
+  root_dir = function(bufnr, on_dir)
+    local filename = vim.api.nvim_buf_get_name(bufnr)
+    local home = vim.uv.fs_realpath(vim.env.HOME)
+    local root = vim.fs.root(filename, {
+      ".emmyrc.json",
+      ".luarc.json",
+      ".luarc.jsonc",
+      ".luacheckrc",
+      ".stylua.toml",
+      "stylua.toml",
+      "selene.toml",
+      "selene.yml",
+      ".git",
+    })
+
+    -- $HOME is itself a dotfiles Git repository. Never let LuaLS index the
+    -- entire home directory because of that marker.
+    if root and vim.uv.fs_realpath(root) == home then
+      local parent = vim.fs.dirname(filename)
+      if vim.uv.fs_realpath(parent) == home then
+        return
+      end
+      root = parent
+    end
+
+    on_dir(root or vim.fs.dirname(filename))
+  end,
   -- Lua language server settings
   -- See `:help lspconfig-lua`
   settings = {
@@ -83,6 +126,7 @@ vim.lsp.config('helm_ls', {
 vim.lsp.enable('pyright')
 vim.lsp.enable('ts_ls')
 vim.lsp.enable('gopls')
+vim.lsp.enable('clangd')
 vim.lsp.enable('terraformls')
 vim.lsp.enable('yamlls')
 vim.lsp.enable('lua_ls')
