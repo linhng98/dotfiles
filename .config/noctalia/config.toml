@@ -1,0 +1,179 @@
+# Noctalia v5 configuration inspired by sodabyte/dotfiles.
+# Desktop-oriented: no battery, brightness, power-profile, VPN, or hibernate UI.
+
+[shell]
+font_family = "Inter"
+corner_radius_scale = 1.0
+popup_shadows = true
+telemetry_enabled = false
+time_format = "{:%H:%M}"
+
+[shell.animation]
+enabled = true
+speed = 1.0
+
+[shell.launcher]
+app_grid = false
+compact = false
+show_icons = true
+sort_by_usage = true
+pinned = []
+
+[shell.panel]
+control_center_placement = "attached"
+session_placement = "attached"
+wallpaper_placement = "attached"
+launcher_placement = "floating"
+launcher_position = "top_center"
+shadow = true
+transparency_mode = "solid"
+
+[theme]
+mode = "dark"
+source = "builtin"
+builtin = "Dracula"
+pure_black_dark = false
+
+[bar]
+order = ["default"]
+
+[bar.default]
+enabled = true
+position = "top"
+layer = "top"
+reserve_space = true
+auto_hide = false
+smart_auto_hide = false
+background_opacity = 1.0
+capsule = true
+capsule_fill = "surface_variant"
+capsule_opacity = 0.75
+border_width = 0.0
+shadow = true
+concave_edge_corners = false
+margin_edge = 4
+margin_ends = 4
+padding = 8
+thickness = 34
+radius = 12
+widget_spacing = 6
+start = ["control-center", "cpu", "ram", "active_window", "taskbar", "media"]
+center = ["workspaces"]
+end = ["tray", "network", "bluetooth", "notifications", "volume", "clock-main"]
+
+[widget.cpu]
+type = "sysmon"
+stat = "cpu_usage"
+
+[widget.ram]
+type = "sysmon"
+stat = "ram_used"
+
+[widget.active_window]
+type = "active_window"
+icon_size = 14.0
+min_length = 0.0
+max_length = 145.0
+title_scroll = "none"
+
+[widget.media]
+type = "media"
+art_size = 16.0
+min_length = 0.0
+max_length = 145.0
+title_scroll = "none"
+
+[widget.clock-main]
+type = "clock"
+format = "{:%H:%M %a, %b %d}"
+
+[dock]
+enabled = false
+
+[control_center]
+show_session_button = true
+show_shortcut_labels = true
+sidebar = "compact"
+
+[[control_center.shortcuts]]
+type = "wifi"
+
+[[control_center.shortcuts]]
+type = "bluetooth"
+
+[[control_center.shortcuts]]
+type = "caffeine"
+
+[[control_center.shortcuts]]
+type = "nightlight"
+
+[[control_center.shortcuts]]
+type = "notification"
+
+[notification]
+enable_daemon = true
+position = "top_right"
+layer = "top"
+background_opacity = 1.0
+show_actions = true
+show_app_name = true
+
+[osd]
+enabled = true
+position = "bottom_center"
+orientation = "horizontal"
+background_opacity = 1.0
+
+[osd.kinds]
+brightness = false
+keyboard_backlight = false
+power_profile = false
+
+[shell.session]
+grid = false
+show_shortcuts = true
+
+[[shell.session.actions]]
+action = "lock"
+enabled = true
+shortcut = "1"
+
+[[shell.session.actions]]
+action = "logout"
+enabled = true
+shortcut = "2"
+
+[[shell.session.actions]]
+action = "lock_and_suspend"
+enabled = true
+shortcut = "3"
+
+[[shell.session.actions]]
+action = "reboot"
+enabled = true
+shortcut = "4"
+
+[[shell.session.actions]]
+action = "shutdown"
+enabled = true
+shortcut = "5"
+variant = "destructive"
+
+[wallpaper]
+enabled = true
+fill_mode = "crop"
+transition = ["fade"]
+transition_duration = 1500.0
+edge_smoothness = 0.05
+
+[wallpaper.automation]
+enabled = false
+interval_seconds = 300
+order = "random"
+recursive = false
+
+[weather]
+enabled = false
+
+[calendar]
+enabled = false
